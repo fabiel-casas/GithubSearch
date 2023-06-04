@@ -2,7 +2,7 @@ package com.fabiel.casas.githubsearch.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val md_theme_light_primary = Color(0xFF1360A5)
+val md_theme_light_primary = Color(0xFF212429)
 val md_theme_light_onPrimary = Color(0xFFFFFFFF)
 val md_theme_light_primaryContainer = Color(0xFFD3E4FF)
 val md_theme_light_onPrimaryContainer = Color(0xFF001C38)
@@ -27,8 +27,8 @@ val md_theme_light_inversePrimary = Color(0xFFA2C9FF)
 val md_theme_light_surfaceTint = Color(0xFF1360A5)
 val md_theme_light_outlineVariant = Color(0xFFC3C6CF)
 val md_theme_light_scrim = Color(0xFF000000)
-val md_theme_light_surface = Color(0xFFD3E4FF)
-val md_theme_light_onSurface = Color(0xFF001C38)
+val md_theme_light_surface = Color(0xFFFAF9FD)
+val md_theme_light_onSurface = Color(0xFF1A1C1E)
 val md_theme_light_surfaceVariant = Color(0xFFDFE2EB)
 val md_theme_light_onSurfaceVariant = Color(0xFF43474E)
 
@@ -57,8 +57,8 @@ val md_theme_dark_inversePrimary = Color(0xFF1360A5)
 val md_theme_dark_surfaceTint = Color(0xFFA2C9FF)
 val md_theme_dark_outlineVariant = Color(0xFF43474E)
 val md_theme_dark_scrim = Color(0xFF000000)
-val md_theme_dark_surface = Color(0xFF004881)
-val md_theme_dark_onSurface = Color(0xFFD3E4FF)
+val md_theme_dark_surface = Color(0xFF121316)
+val md_theme_dark_onSurface = Color(0xFFC6C6CA)
 val md_theme_dark_surfaceVariant = Color(0xFF43474E)
 val md_theme_dark_onSurfaceVariant = Color(0xFFC3C6CF)
 

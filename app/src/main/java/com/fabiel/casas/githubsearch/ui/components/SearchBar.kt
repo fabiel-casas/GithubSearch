@@ -54,7 +54,7 @@ fun SearchBar(
                     .requiredSize(24.dp),
                 painter = painterResource(id = R.drawable.ic_search_24),
                 contentDescription = stringResource(R.string.search_user),
-                tint = MaterialTheme.colorScheme.onPrimaryContainer,
+                tint = MaterialTheme.colorScheme.onSurface,
             )
         },
         singleLine = true,
@@ -67,7 +67,7 @@ fun SearchBar(
                             .requiredSize(24.dp),
                         painter = painterResource(id = R.drawable.ic_close_24),
                         contentDescription = stringResource(R.string.close_search),
-                        tint = MaterialTheme.colorScheme.onPrimaryContainer,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
             }
@@ -81,15 +81,15 @@ fun SearchBar(
             )
         },
         colors = TextFieldDefaults.outlinedTextFieldColors(
-            containerColor = MaterialTheme.colorScheme.surfaceVariant,
+            containerColor = MaterialTheme.colorScheme.surface,
             disabledBorderColor = Color.Transparent,
             errorBorderColor = Color.Transparent,
             focusedBorderColor = Color.Transparent,
             unfocusedBorderColor = Color.Transparent,
-            focusedLeadingIconColor = MaterialTheme.colorScheme.primary,
-            unfocusedLeadingIconColor = MaterialTheme.colorScheme.primary,
-            disabledLeadingIconColor = MaterialTheme.colorScheme.primary,
-            errorLeadingIconColor = MaterialTheme.colorScheme.primary,
+            focusedLeadingIconColor = MaterialTheme.colorScheme.onSurface,
+            unfocusedLeadingIconColor = MaterialTheme.colorScheme.onSurface,
+            disabledLeadingIconColor = MaterialTheme.colorScheme.onSurface,
+            errorLeadingIconColor = MaterialTheme.colorScheme.onSurface,
             textColor = MaterialTheme.colorScheme.onSurface
         )
     )
