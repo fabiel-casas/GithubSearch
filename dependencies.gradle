@@ -1,0 +1,15 @@
+ext {
+    coreKtx = '1.8.0'
+    coil = '2.4.0'
+    retrofit = '2.9.0'
+    koin_version = '3.4.1'
+
+    general = [
+            coreKtx     : "androidx.core:core-ktx:$coreKtx",
+            coil        : "io.coil-kt:coil-compose:$coil",
+            retrofit    : "com.squareup.retrofit2:retrofit:$retrofit",
+            retrofitGson: "com.squareup.retrofit2:converter-gson:$retrofit",
+            koin        : "io.insert-koin:koin-android:$koin_version",
+            koinCompose : "io.insert-koin:koin-androidx-compose:$koin_version",
+    ]
+}
