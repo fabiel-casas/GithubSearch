@@ -26,7 +26,6 @@ data class UserSearchResponse(
     val organizations_url: String,
     val received_events_url: String,
     val repos_url: String,
-    val score: Int,
     val site_admin: Boolean,
     val starred_url: String,
     val subscriptions_url: String,

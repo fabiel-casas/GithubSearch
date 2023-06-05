@@ -26,7 +26,6 @@ class UserSearchUseCaseImpl(
         id = id,
         accountName = login,
         avatarUrl = avatarUrl,
-        score = score.toString()
     )
 
     private fun GitHubUser.toUserDetails() = UserDetails(

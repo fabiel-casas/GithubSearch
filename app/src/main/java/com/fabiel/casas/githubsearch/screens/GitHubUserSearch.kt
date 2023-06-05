@@ -12,10 +12,12 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.fabiel.casas.githubsearch.SampleData
 import com.fabiel.casas.githubsearch.ui.components.SearchBar
 import com.fabiel.casas.githubsearch.ui.components.UserRow
 import com.fabiel.casas.githubsearch.ui.theme.GitHubSearchTheme
@@ -97,7 +99,9 @@ fun GitHubSearchUserContent(
 private fun GitHubSearchUserContentPreview() {
     GitHubSearchTheme {
         GitHubSearchUserContent(
-            state = remember { GitHubSearchUserState() },
+            state = remember { GitHubSearchUserState(
+                displayUserList = mutableStateOf(SampleData.userItems)
+            ) },
             onSearchChange = {},
             onSearchCloseAction = {},
             onNavigateToUserDetails = {}

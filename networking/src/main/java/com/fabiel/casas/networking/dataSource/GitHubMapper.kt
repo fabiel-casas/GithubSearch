@@ -15,7 +15,6 @@ class GitHubMapper {
         id = id,
         avatarUrl = avatar_url,
         login = login,
-        score = score,
         url = url
     )
 
@@ -24,7 +23,6 @@ class GitHubMapper {
         avatarUrl = avatar_url.orEmpty(),
         login = login,
         url = url.orEmpty(),
-        score = following,
         bio = bio.orEmpty(),
         blog = blog.orEmpty(),
         company = company.orEmpty(),

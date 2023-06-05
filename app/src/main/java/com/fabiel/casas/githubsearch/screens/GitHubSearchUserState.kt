@@ -17,5 +17,4 @@ data class UserItem(
     val id: Int,
     val accountName: String,
     val avatarUrl: String,
-    val score: String,
 )

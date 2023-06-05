@@ -27,6 +27,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -43,6 +44,7 @@ import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import coil.size.Scale
 import com.fabiel.casas.githubsearch.R
+import com.fabiel.casas.githubsearch.SampleData
 import com.fabiel.casas.githubsearch.ui.theme.GitHubSearchTheme
 import org.koin.androidx.compose.getViewModel
 
@@ -335,7 +337,9 @@ private fun FollowContainer(
 private fun GitHubUserContentPreview() {
     GitHubSearchTheme {
         val state = remember {
-            GitHubUserState()
+            GitHubUserState(
+                user = mutableStateOf(SampleData.userDetails)
+            )
         }
         GitHubUserContent(
             state = state,

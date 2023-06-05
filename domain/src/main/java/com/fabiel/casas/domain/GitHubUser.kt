@@ -9,7 +9,6 @@ data class GitHubUser(
     val id: Int,
     val avatarUrl: String,
     val login: String,
-    val score: Int,
     val url: String,
     // Detail information
     val bio: String = "",
