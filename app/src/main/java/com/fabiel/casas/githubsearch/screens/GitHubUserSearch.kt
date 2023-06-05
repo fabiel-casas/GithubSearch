@@ -1,5 +1,6 @@
 package com.fabiel.casas.githubsearch.screens
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -28,8 +29,9 @@ import org.koin.androidx.compose.getViewModel
 @Composable
 fun GitHubSearchUserScreen(
     viewModel: GitHubSearchUserViewModel = getViewModel(),
+    onNavigateToUserDetails:(userName: String) -> Unit,
 ) {
-    LaunchedEffect(key1 = Unit, block = {
+    LaunchedEffect(key1 = viewModel, block = {
         viewModel.loadDefaultSearch()
     })
     GitHubSearchUserContent(
@@ -39,7 +41,8 @@ fun GitHubSearchUserScreen(
         },
         onSearchCloseAction = {
             viewModel.onSearchChange("")
-        }
+        },
+        onNavigateToUserDetails = onNavigateToUserDetails
     )
 }
 
@@ -48,6 +51,7 @@ fun GitHubSearchUserScreen(
 fun GitHubSearchUserContent(
     state: GitHubSearchUserState,
     onSearchChange: (String) -> Unit,
+    onNavigateToUserDetails: (String) -> Unit,
     onSearchCloseAction: () -> Unit,
 ) {
     Scaffold(
@@ -74,6 +78,9 @@ fun GitHubSearchUserContent(
                 items(state.displayUserList.value) { user ->
                     UserRow(
                         modifier = Modifier
+                            .clickable {
+                                onNavigateToUserDetails(user.accountName)
+                            }
                             .padding(horizontal = 16.dp, vertical = 8.dp)
                             .fillMaxWidth(),
                         avatarUrl = user.avatarUrl,
@@ -92,7 +99,8 @@ private fun GitHubSearchUserContentPreview() {
         GitHubSearchUserContent(
             state = remember { GitHubSearchUserState() },
             onSearchChange = {},
-            onSearchCloseAction = {}
+            onSearchCloseAction = {},
+            onNavigateToUserDetails = {}
         )
     }
 }

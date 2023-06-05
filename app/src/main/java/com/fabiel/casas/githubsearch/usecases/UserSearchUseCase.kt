@@ -1,6 +1,7 @@
 package com.fabiel.casas.githubsearch.usecases
 
 import com.fabiel.casas.githubsearch.screens.UserItem
+import com.fabiel.casas.githubsearch.screens.details.UserDetails
 
 /**
  * GitHubSearch
@@ -10,4 +11,6 @@ import com.fabiel.casas.githubsearch.screens.UserItem
 interface UserSearchUseCase {
     suspend fun loadDefaultUsers(): List<UserItem>
     suspend fun searchUser(search: String): List<UserItem>
+
+    suspend fun getUserDetails(userName: String): UserDetails
 }

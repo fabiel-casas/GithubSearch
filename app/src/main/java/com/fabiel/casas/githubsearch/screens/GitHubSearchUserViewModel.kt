@@ -25,6 +25,7 @@ class GitHubSearchUserViewModel(
     )
 
     fun loadDefaultSearch() {
+        if (searchQuery.value.isNotEmpty()) return
         viewModelScope.launch(Dispatchers.IO) {
             runCatching {
                 userSearchUseCase.loadDefaultUsers()

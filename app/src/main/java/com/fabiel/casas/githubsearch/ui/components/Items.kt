@@ -33,7 +33,6 @@ fun UserRow(
     modifier: Modifier,
     avatarUrl: String,
     userName: String,
-    name: String = "",
 ) {
     Row(
         modifier = modifier,
@@ -49,7 +48,7 @@ fun UserRow(
             modifier = Modifier
                 .requiredSize(40.dp)
                 .clip(CircleShape),
-            contentDescription = name,
+            contentDescription = userName,
         )
         Spacer(modifier = Modifier.width(16.dp))
         Column {
@@ -57,10 +56,6 @@ fun UserRow(
                 text = userName,
                 style = MaterialTheme.typography.bodyLarge,
                 fontWeight = FontWeight.Bold,
-            )
-            Text(
-                text = "",
-                style = MaterialTheme.typography.bodyLarge,
             )
         }
     }
@@ -72,7 +67,6 @@ private fun UserItemPreview() {
     GitHubSearchTheme {
         UserRow(
             modifier = Modifier.fillMaxWidth(),
-            name = "Sample text name",
             userName = "Sample text user name",
             avatarUrl = ""
         )

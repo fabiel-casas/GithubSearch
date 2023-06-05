@@ -2,4 +2,6 @@
     <string name="app_name">GitHub Search</string>
     <string name="search_user">Search User</string>
     <string name="close_search">Close Search</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
 </resources>

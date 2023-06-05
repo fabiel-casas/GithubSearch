@@ -1,6 +1,7 @@
 package com.fabiel.casas.githubsearch
 
 import com.fabiel.casas.githubsearch.screens.GitHubSearchUserViewModel
+import com.fabiel.casas.githubsearch.screens.details.GitHubUserViewModel
 import com.fabiel.casas.githubsearch.usecases.UserSearchUseCase
 import com.fabiel.casas.githubsearch.usecases.UserSearchUseCaseImpl
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -17,5 +18,8 @@ val appModule = module {
     }
     viewModel {
         GitHubSearchUserViewModel(get())
+    }
+    viewModel {
+        GitHubUserViewModel(get())
     }
 }

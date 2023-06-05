@@ -11,7 +11,7 @@ import okhttp3.Response
 class GitHubInterceptor: Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
         val builder = chain.request().newBuilder()
-        builder.addHeader("Authorization", "Bearer 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")
+        builder.addHeader("Authorization", "Bearer REPLACE_YOUR_TOKEN_HERE!!!!")
         return chain.proceed(builder.build())
     }
 }

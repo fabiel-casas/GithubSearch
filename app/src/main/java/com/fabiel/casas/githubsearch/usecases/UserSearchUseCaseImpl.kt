@@ -2,6 +2,8 @@ package com.fabiel.casas.githubsearch.usecases
 
 import com.fabiel.casas.domain.GitHubUser
 import com.fabiel.casas.githubsearch.screens.UserItem
+import com.fabiel.casas.githubsearch.screens.details.UserDetails
+import com.fabiel.casas.githubsearch.tools.prettyCount
 import com.fabiel.casas.networking.dataSource.GitHubDataSource
 
 /**
@@ -21,6 +23,28 @@ class UserSearchUseCaseImpl(
     }
 
     private fun GitHubUser.toUserItem() = UserItem(
-        id = id, accountName = login, avatarUrl = avatarUrl
+        id = id,
+        accountName = login,
+        avatarUrl = avatarUrl,
+        score = score.toString()
     )
+
+    private fun GitHubUser.toUserDetails() = UserDetails(
+        id = id,
+        accountName = login,
+        avatarUrl = avatarUrl,
+        followers = prettyCount(followers),
+        following = prettyCount(following),
+        name = name,
+        bio = bio,
+        company = company,
+        location = location,
+        email = email,
+        blog = blog,
+        twitter = twitterUsername,
+    )
+
+    override suspend fun getUserDetails(userName: String): UserDetails {
+        return gitHubDataSource.getUser(userName).toUserDetails()
+    }
 }
